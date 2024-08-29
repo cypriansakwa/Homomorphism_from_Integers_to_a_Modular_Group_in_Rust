@@ -1,0 +1,6 @@
+[package]
+name = "Homomorphism_from_Integers_to_a_Modular_Group_in_Rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
