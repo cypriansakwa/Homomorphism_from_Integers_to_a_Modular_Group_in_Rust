@@ -19,7 +19,7 @@ This Rust program shows how to implement a homomorphism from the set of integers
 - After installing Rust, clone this repository or copy the code into a Rust project, Compile and run the code using cargo run.
 ## Usage
 - To use this code, you can clone the repository.
-- You can change the values of $q,n$ and $m$ in the main function to test different cases.
+- You can change the values of $a,b$ and modulus in the main function to test different cases.
 - Compile the Rust code using cargo:
 >```
 >cargo build
