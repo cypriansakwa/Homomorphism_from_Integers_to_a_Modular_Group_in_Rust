@@ -10,7 +10,13 @@ This Rust program shows how to implement a homomorphism from the set of integers
 > input % self.modulus
 >}
 >}
+## Contributing
+  - If you intend to contribute to this project, fork the repository and make a pull request.
+## Installation
 
+- To use this project, you need to have Rust installed on your machine.
+- If Rust is not installed, follow the instructions on the [official Rust website](https://www.rust-lang.org/tools/install) to install it.
+- After installing Rust, clone this repository or copy the code into a Rust project, Compile and run the code using cargo run.
 ## Usage
 - To use this code, you can clone the repository.
 - You can change the values of $q,n$ and $m$ in the main function to test different cases.
@@ -18,8 +24,38 @@ This Rust program shows how to implement a homomorphism from the set of integers
 >```
 >cargo build
 >cargo run
-
- 
+## Example 
+- The main function tests the homomorphism property: $\phi(a+b)=\phi(a)+\phi(b)\bmod 6$ where $\phi$ is the homomorphism function, $a$ and $b$ are integers, and $6$ is the modulus.
+ >```
+> fn main() {
+>  let homomorphism = ModHomomorphism { modulus: 6 };
+>  let a = 14;
+>  let b = 5;
+>  // Test the homomorphism property
+> let mapped_sum = homomorphism.map(a + b);
+> let sum_of_mapped = (homomorphism.map(a) + homomorphism.map(b)) % homomorphism.modulus;
+>  println!( "\u{03C6}({}) = {}, \u{03C6}({}) = {}, \u{03C6}({} + {}) = {}, (\u{03C6}({}) + \u{03C6}({})) % 6 = {}",
+>   a,
+>   homomorphism.map(a),
+>       b,
+>       homomorphism.map(b),
+>       a,
+>       b,
+>       mapped_sum,
+>       a,
+>        b,
+>        sum_of_mapped
+>        );
+>       // Check if the homomorphism property holds
+>     assert_eq!(mapped_sum, sum_of_mapped);
+>     println!("Homomorphism property verified!");
+>}
+## Expected Output
+- When running the program, you should see output similar to:
+ >```
+> φ(14) = 2, φ(5) = 5, φ(14 + 5) = 1, (φ(14) + φ(5)) % 6 = 1
+> Homomorphism property verified!
+- This confirms that the homomorphism property holds for the given integers and modulus.
 ## Acknowledgments
 - Rust
 ### Clone the repository or copy the source code into a Rust project.
