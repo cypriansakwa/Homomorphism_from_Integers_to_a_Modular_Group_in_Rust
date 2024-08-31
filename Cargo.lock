@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "Define_Homomorphism_between_2_groups"
+name = "Homomorphism_from_Integers_to_a_Modular_Group_in_Rust"
 version = "0.1.0"

@@ -19,12 +19,12 @@ fn main() {
     let a = 14;
     let b = 5;
     
-    // Test the homomorphism property: φ(a + b) = φ(a) + φ(b) mod 6
-    let mapped_sum = homomorphism.map(a + b);  // φ(14 + 5)
-    let sum_of_mapped = (homomorphism.map(a) + homomorphism.map(b)) % homomorphism.modulus; // (φ(14) + φ(5)) % 6
+    // Test the homomorphism property: \u{03C6}(a + b) = \u{03C6}(a) + \u{03C6}(b) mod 6
+    let mapped_sum = homomorphism.map(a + b);  // \u{03C6}(14 + 5)
+    let sum_of_mapped = (homomorphism.map(a) + homomorphism.map(b)) % homomorphism.modulus; // (\u{03C6}(14) + \u{03C6}(5)) % 6
 
     println!(
-        "φ({}) = {}, φ({}) = {}, φ({} + {}) = {}, (φ({}) + φ({})) % 6 = {}",
+        "\u{03C6}({}) = {}, \u{03C6}({}) = {}, \u{03C6}({} + {}) = {}, (\u{03C6}({}) + \u{03C6}({})) % 6 = {}",
         a,
         homomorphism.map(a),
         b,
